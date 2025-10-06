@@ -6,9 +6,9 @@ if (!empty($_SESSION['flash'])) {
     $message = $flash['message'] ?? '';
 
     $styles = [
-        'success' => 'bg-emerald-500/10 text-emerald-200 border-emerald-500/40',
-        'error' => 'bg-rose-500/10 text-rose-200 border-rose-500/40',
-        'info' => 'bg-sky-500/10 text-sky-200 border-sky-500/40',
+        'success' => 'bg-emerald-50 text-emerald-700 border-emerald-200',
+        'error' => 'bg-rose-50 text-rose-700 border-rose-200',
+        'info' => 'bg-sky-50 text-sky-700 border-sky-200',
     ];
 
     $icon = [
@@ -20,8 +20,8 @@ if (!empty($_SESSION['flash'])) {
     $styleClass = $styles[$type] ?? $styles['info'];
     $path = $icon[$type] ?? $icon['info'];
     ?>
-    <div class="mb-8 flex items-start gap-3 rounded-2xl border px-5 py-4 shadow-lg shadow-black/10 <?php echo $styleClass; ?>">
-        <span class="mt-0.5 inline-flex rounded-full bg-black/10 p-2">
+    <div class="mb-8 flex items-start gap-3 rounded-2xl border px-5 py-4 shadow <?php echo $styleClass; ?>">
+        <span class="mt-0.5 inline-flex rounded-full bg-white/70 p-2 text-slate-500">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="h-5 w-5">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="<?php echo $path; ?>" />
             </svg>

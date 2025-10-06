@@ -1,8 +1,8 @@
 </main>
-<footer class="border-t border-slate-800 bg-slate-900/80 py-6">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-sm text-slate-400 md:flex-row">
+<footer class="border-t border-slate-200 bg-white/80 py-6">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-sm text-slate-500 md:flex-row">
         <p>&copy; <?php echo date('Y'); ?> Harvard School Library. Crafted with care for a smarter catalogue.</p>
-        <p>Powered by Tailwind CSS &amp; SQLite.</p>
+        <p>Powered by Tailwind CSS &amp; MySQL.</p>
     </div>
 </footer>
 <script>

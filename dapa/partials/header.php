@@ -31,22 +31,23 @@ $pageTitle = $pageTitle ?? 'Book Inventory';
     <link rel="stylesheet" href="partials/style.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-full bg-slate-950 text-slate-100">
-<header class="border-b border-slate-800 bg-slate-900/70 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="index.php" class="flex items-center gap-3 text-lg font-semibold tracking-tight text-white">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand/20 text-brand">
+<body class="min-h-full bg-slate-100 text-slate-800">
+<header class="border-b border-slate-200 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
+        <a href="index.php" class="flex items-center gap-3 text-lg font-semibold tracking-tight text-slate-900">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-brand/15 text-brand">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
                     <path d="M4.75 5A2.75 2.75 0 0 1 7.5 2.25h9a2.75 2.75 0 0 1 2.75 2.75v14.06a.94.94 0 0 1-1.49.78l-4.56-3.04a1 1 0 0 0-1.1 0l-4.56 3.04a.94.94 0 0 1-1.49-.78z" />
                 </svg>
             </span>
             <span>Harvard School Library</span>
         </a>
-        <nav class="flex items-center gap-2 text-sm font-medium">
-            <a href="index.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-white <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'bg-brand/10 text-white' : 'text-slate-300'; ?>">Dashboard</a>
-            <a href="add.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-white <?php echo basename($_SERVER['PHP_SELF']) === 'add.php' ? 'bg-brand/10 text-white' : 'text-slate-300'; ?>">Add book</a>
-            <a href="stats.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-white <?php echo basename($_SERVER['PHP_SELF']) === 'stats.php' ? 'bg-brand/10 text-white' : 'text-slate-300'; ?>">Insights</a>
-            <a href="?logout=true" class="rounded-full px-4 py-2 text-slate-400 transition hover:bg-rose-500/10 hover:text-rose-300">Lock</a>
+        <nav class="flex flex-wrap items-center gap-2 text-sm font-medium">
+            <a href="index.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-brand <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'bg-brand/10 text-brand' : 'text-slate-500'; ?>">Dashboard</a>
+            <a href="add.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-brand <?php echo basename($_SERVER['PHP_SELF']) === 'add.php' ? 'bg-brand/10 text-brand' : 'text-slate-500'; ?>">Add stock</a>
+            <a href="sell.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-brand <?php echo basename($_SERVER['PHP_SELF']) === 'sell.php' ? 'bg-brand/10 text-brand' : 'text-slate-500'; ?>">Record sale</a>
+            <a href="stats.php" class="rounded-full px-4 py-2 transition hover:bg-brand/10 hover:text-brand <?php echo basename($_SERVER['PHP_SELF']) === 'stats.php' ? 'bg-brand/10 text-brand' : 'text-slate-500'; ?>">Reports</a>
+            <a href="?logout=true" class="rounded-full px-4 py-2 text-slate-400 transition hover:bg-rose-100 hover:text-rose-600">Lock</a>
         </nav>
     </div>
 </header>
