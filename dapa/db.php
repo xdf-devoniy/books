@@ -40,11 +40,15 @@ function table_columns(mysqli $db, string $table): array
     }
 
     if (!array_key_exists($table, $cache)) {
-        $result = $db->query('SHOW COLUMNS FROM `' . $table . '`');
         $columns = [];
 
-        while ($row = $result->fetch_assoc()) {
-            $columns[] = (string) $row['Field'];
+        try {
+            $result = $db->query('SELECT * FROM `' . $table . '` LIMIT 0');
+            foreach ($result->fetch_fields() as $field) {
+                $columns[] = (string) $field->name;
+            }
+        } catch (Throwable $exception) {
+            $columns = [];
         }
 
         $cache[$table] = $columns;
