@@ -1,2 +1,0 @@
-[13-Nov-2024 11:35:14 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/harvards/public_html/books/kids/actions/sell_book.php on line 13
-[13-Nov-2024 11:42:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/harvards/public_html/books/kids/actions/sell_book.php on line 13
